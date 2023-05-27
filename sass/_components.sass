@@ -1,0 +1,371 @@
+// ======================================= //
+// logo //
+.logo
+  height: 3.25rem 
+  margin-left: 2rem
+
+
+// ======================================= //
+// search form //
+.search
+  display: flex
+  align-items: center
+  justify-content: center
+  flex: 0 1 40%
+  @media only screen and (max-width: $bp-smallest)
+    flex: 0 1 100%
+    order: 1
+    background-color: var(--color-grey-light-2)
+  &__input
+    width: 90%
+    padding: 1rem 2rem
+    border-radius: 100px
+    border: none
+    background-color: var(--color-grey-light-2)
+    margin-right: -3rem
+    transition: all .2s
+    color: var(--color-grey-dark-3)
+    @media only screen and (max-width: $bp-smallest)
+      border-radius: 0
+    &:focus
+      background-color: var(--color-grey-light-3)
+      outline: none
+      width: 100%
+      + button
+        background-color: var(--color-grey-light-3)
+    &::placeholder
+      color: var(--color-grey-dark-3)
+  &__button
+    background-color: var(--color-grey-light-2)
+    border: none
+  &__icon
+    width: 2rem
+    height: 2rem
+    fill: var(--color-grey-dark-3)
+
+
+// ======================================= //
+// header nav //
+.user-nav
+  display: flex
+  align-items: center
+  align-self: stretch
+  > *
+    align-self: stretch
+    padding: 0 2rem
+    cursor: pointer
+    &:hover
+      background-color: var(--color-grey-light-2)
+  &__icon-box
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+  &__icon
+    width: 2.25rem
+    height: 2.25rem
+    fill: var(--color-grey-dark-2)
+  &__span
+    position: absolute
+    top: 1.4rem
+    right: 1.1rem
+
+    width: 1.75rem
+    height: 1.75rem
+    border-radius: 50%
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    background-color: var(--color-primary)
+    color: var(--color-white)
+    font-size: .8rem
+  &__user
+    display: flex
+    align-items: center
+  &__user-photo
+    height: 3.75rem
+    border-radius: 50%
+    margin-right: 1rem
+
+
+// ======================================= //
+// side nav //
+.side-nav
+  display: flex
+  flex-direction: column
+  padding-left: 0
+  list-style: none
+  margin-top: 3.5rem
+  font-size: 1.4rem
+  @media only screen and (max-width: $bp-medium)
+    flex-direction: row
+    margin-top: 0
+  &__item
+    padding: 1.5rem 3rem
+    position: relative
+    z-index: 2
+    cursor: pointer
+    @media only screen and (max-width: $bp-medium)
+      flex: 1
+      display: flex
+      justify-content: center
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 0.3rem
+      transform: scaleY(0)
+      background-color: var(--color-primary)
+      transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-color .1s
+      z-index: -1
+    &-active
+      background-color: var(--color-primary)
+    &:hover
+      &::before
+        transform: scaleY(1)
+        width: 100%
+  &__link
+    display: flex
+    align-items: center
+    text-decoration: none
+    color: var(--color-grey-light-1)
+    text-transform: uppercase
+    @media only screen and (max-width: $bp-small)
+      flex-direction: column
+  &__icon
+    width: 2rem
+    height: 2rem
+    fill: currentColor
+    margin-right: 2rem
+    @media only screen and (max-width: $bp-small)
+      margin-right: 0
+      margin-bottom: 0.5rem
+  &__text
+
+
+// ======================================= //
+// gallery //
+.gallery
+  display: flex
+  &__photo
+    display: block
+    max-width: 100%
+
+
+// ======================================= //
+// legal text //
+.legal
+  margin-top: auto
+  text-align: center
+  color: var(--color-grey-light-4)
+  font-size: 1.2rem
+  padding: 2.5rem
+  @media only screen and (max-width: $bp-medium)
+    display: none
+
+// ======================================= //
+// hotel overview //
+.overview
+  display: flex
+  border-bottom: var(--line)
+  align-items: center
+  background-color: var(--color-white)
+  &__heading
+    padding: 1.5rem 3rem
+    font-size: 2.4rem
+    text-transform: uppercase
+    font-weight: 100
+  &__stars
+    margin-right: auto
+    display: flex
+    align-items: center
+  &__stars-icon, &__location-icon
+    width: 1.75rem
+    height: 1.75rem
+    fill: var(--color-primary)
+  &__location
+    display: flex
+    align-items: center
+    font-size: 1.2rem
+  &__rating
+    align-self: stretch
+    background-color: var(--color-primary)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    color: var(--color-white)
+    margin-left: 3rem
+    padding: 0 2.25rem
+  &__rating-average
+    font-size: 2.4rem
+    font-weight: 300
+    margin-bottom: -3px
+  &__rating-count
+    font-size: .8rem
+    text-transform: uppercase
+
+
+// ======================================= //
+// button //
+.button-inline
+  background-color: transparent
+  border: none
+  color: var(--color-primary)
+  font-size: inherit
+  padding-bottom: 2px
+  border-bottom: 1px solid currentColor
+  cursor: pointer
+  transition: all .2s
+  display: inline-block
+  font-weight: 400
+  &:hover
+    color: var(--color-grey-dark-1)
+  &:focus
+    outline: none
+    animation: scale 1s infinite
+@keyframes scale
+  0%
+    transform: scale(1)
+    box-shadow: none
+  50%
+    transform: scale(1.05)
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, .25) 
+  100%
+    transform: scale(1)
+    box-shadow: none
+
+
+// ======================================= //
+// description //
+.description
+  .text
+    &:not(:last-child)
+      margin-bottom: 2rem
+  .list
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    border-top: var(--line)
+    border-bottom: var(--line)
+    padding-block: 3rem
+    margin-block: 3rem
+    &__item
+      flex: 0 1 50%
+      margin-bottom: 0.8rem
+      position: relative
+      &::before
+        content: ""
+        width: 1rem
+        height: 1rem
+        display: inline-block
+        background-image: url(../../img/chevron-thin-right.svg)
+        background-size: cover
+        margin-right: .7rem
+
+        @supports (mask-image: url()) or (-webkit-mask-image: url())
+          background-color: var(--color-primary)
+          mask-image: url(../../img/chevron-thin-right.svg)
+          mask-size: cover
+          background-image: none
+  .recommend
+    display: flex
+    align-items: center
+    &__count
+      margin-right: auto
+    &__friends
+      display: flex
+    &__photo
+      width: 4rem
+      height: 4rem
+      border: 3px solid var(--color-white)
+      box-sizing: content-box
+      border-radius: 50%
+      &:not(:last-child)
+        margin-right: -2rem
+
+
+// ======================================= //
+// reviews //
+.review
+  padding: 3rem
+  background-color: var(--color-white)
+  box-shadow: var(--shadow-light)
+  margin-bottom: 3rem
+  @media only screen and (max-width: $bp-medium)
+    padding: 2rem
+  &__quote
+    margin-bottom: 2.5rem
+  &__user
+    display: flex
+    align-items: center
+    &-photo
+      width: 5rem
+      height: 5rem
+      border-radius: 50%
+      margin-right: 2rem
+    &-box
+      margin-right: auto
+      font-size: 1.2rem
+  &__user-name
+    font-weight: 600
+  &__user-date
+    font-weight: 100
+  &__rating
+    font-size: 2.2rem
+    font-weight: 100
+    color: var(--color-primary)
+
+
+// ======================================= //
+// cta //
+.cta
+  padding: 3.5rem
+  background-color: var(--color-white)
+  text-align: center
+  &__book-now
+    font-size: 2rem
+    font-weight: 100
+    text-transform: uppercase
+    margin-bottom: 2.5rem
+  
+
+// ======================================= //
+// btn //
+.btn
+  font-size: 1.5rem
+  border: none
+  background: none
+  font-weight: 400
+  cursor: pointer
+  text-transform: uppercase
+  position: relative
+  overflow: hidden
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark))
+  color: var(--color-white)
+  border-radius: 100px
+  &:hover
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light))
+    .btn__visible
+      transform: translateY(5rem)
+    .btn__unvisible
+      top: 0
+  &:focus
+    animation: scale 1s infinite
+  &__visible
+    padding: 2rem 7.5rem
+    display: inline-block
+    transition: all .3s
+  &__unvisible
+    transition: all .3s
+    position: absolute
+    display: inline-block
+    top: -100%
+    left: 0
+    padding: 2rem
+    width: 100%
+    height: 100%

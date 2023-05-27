@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid{
+      max-width: 900px;
+      margin-inline: auto;
+      margin-block: 30px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      gap: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .grid > *{
+      background-color: #ff2a00;
+      padding: 20px;
+    }
+    /* .header{ */
+      /* grid-column: span 4; */
+      /* height: 80px; */
+    /* } */
+    /* .box{ */
+      /* grid-column: span 1; */
+      /* height: 150px; */
+    /* } */
+    /* .sidebar{ */
+      /* grid-row: span 2; */
+    /* } */
+    /* .main{ */
+      /* grid-column: span 3; */
+      /* height: 250px; */
+    /* } */
+    /* .footer{ */
+      /* grid-column: span 4; */
+      /* height: 80px; */
+    /* } */
+  </style>
+  <style>
+    .grid{
+      display: grid;
+      grid-template-rows: 100px 200px 400px 100px;
+      grid-template-columns: repeat(3, 1fr) 200px;
+      grid-template-areas: ". header header ."
+                          "box box box side"
+                          "main main main side"
+                          "footer footer footer footer"
+                          ;
+    }
+    .header{
+      grid-area: header;
+    }
+    .box{
+      grid-area: box;
+    }
+    .sidebar{
+      grid-area: side;
+    }
+    .main{
+      grid-area: main;
+    }
+    .footer{
+      grid-area: footer;
+    }
+    .container{
+      width: 1000px;
+      margin: 30px auto;
+      background-color: #ddd;
+
+      display: grid;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-rows: repeat(2, minmax(150px, min-content));
+      grid-template-columns: max-content 1fr 1fr min-content;
+    }
+    .item{
+      padding: 20px;
+      color: white;
+      font-family: sans-serif;
+      font-size: 30px;
+    }
+    .item--1{ background-color: orangered; }
+    .item--2{ background-color: yellowgreen; }
+    .item--3{ background-color: blueviolet; }
+    .item--4{ background-color: palevioletred; }
+    .item--5{ background-color: royalblue; }
+    .item--6{ background-color: goldenrod; }
+    .item--7{ background-color: crimson; }
+    .item--8{ background-color: darkslategray; }
+  </style>
+</head>
+<body>
+  <!-- <div class="grid"> -->
+    <!-- <header class="header">Header</header> -->
+    <!-- <div class="box box-1">Small box 1</div> -->
+    <!-- <div class="box box-2">Small box 2</div> -->
+    <!-- <div class="box box-3">Small box 3</div> -->
+    <!-- <nav class="sidebar">Sidebar</nav> -->
+    <!-- <main class="main">Main</main> -->
+    <!-- <footer class="footer">Footer</footer> -->
+  <!-- </div> -->
+
+  <div class="container">
+    <div class="item item--1">Modern</div>
+    <div class="item item--2">CSS</div>
+    <div class="item item--3">with</div>
+    <div class="item item--4">Flexbox</div>
+    <div class="item item--5">and</div>
+    <div class="item item--6">Grid</div>
+    <div class="item item--7">is</div>
+    <div class="item item--8">Great Lorem ipsum dolor sit amet.</div>
+  </div>
+
+
+</body>
+</html>

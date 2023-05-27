@@ -1,0 +1,64 @@
+.container
+  max-width: 120rem
+  margin-inline: auto
+  margin-block: 8rem
+  box-shadow: var(--shadow-dark)
+  background-color: var(--color-white)
+  min-height: 50rem
+  @media only screen and (max-width: $bp-largest)
+    margin: 0
+    max-width: 100%
+    width: 100%
+.header
+  height: 7rem
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-bottom: var(--line)
+  background-color: var(--color-white)
+  font-size: 1.4rem
+  @media only screen and (max-width: $bp-smallest)
+    flex-wrap: wrap
+    height: 11rem
+.content
+  display: flex
+  @media only screen and (max-width: $bp-medium)
+    flex-direction: column
+  .side-bar
+    flex: 0 1 18%
+    background-color: var(--color-grey-dark-1)
+
+    display: flex
+    flex-direction: column
+    
+  .hotel-view
+    flex: 1
+    background-color: var(--color-grey-light-1)
+    .details
+      background-color: var(--color-grey-light-1)
+      padding: 4.5rem
+      font-size: 1.4rem
+      border-bottom: var(--line)
+      display: flex
+      @media only screen and (max-width: $bp-medium)
+        padding: 3rem
+      @media only screen and (max-width: $bp-medium)
+        flex-direction: column
+      .description
+        flex: 0 1 60%
+        margin-right: 4.5rem
+        padding: 3rem
+        background-color: var(--color-white)
+        box-shadow: var(--shadow-light)
+        @media only screen and (max-width: $bp-medium)
+          padding: 2rem
+          margin-right: 2rem
+        @media only screen and (max-width: $bp-small)
+          margin-right: 0
+          margin-bottom: 3rem
+      .user-reviews
+        flex: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+

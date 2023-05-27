@@ -1,0 +1,16 @@
+{
+  "name": "trillo-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Khaled Ali Hayek",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.59.2"
+  }
+}
